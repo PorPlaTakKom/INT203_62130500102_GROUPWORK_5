@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Basic Vue Js - HelloWorld App</title>
+    <!-- https://google.github.io/material-design-icons/#icon-font-for-the-web -->
+    <!-- Using via Google Web Fonts -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+    <!-- https://tailwindcss.com/docs/installation -->
+    <!-- Using Tailwind via CDN -->
+    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet" />
+    <!-- https://v3.vuejs.org/guide/installation.html#release-notes -->
+    <!-- Vue CDN -->
+    <script src="https://unpkg.com/vue@next"></script>
+    <link href="mycss.css" rel="stylesheet">
+</head>
+
+<body>
+    <div id="app" class="h-screen h-ful w-screen bg-blue-200 flex items-center">
+        
+        <div class="h-auto w-3/6 shadow shadow-lg bg-white mx-auto rounded-md p-5 text-gray-700">
+            <task-search :search="search" :demo="searchText" :like="countLike" @toggle-search="toggleSearch" @add-text="addText"></task-search>
+           <task-images :tasks="filterText" @toggle-like="toggleLike" @toggle-show="toggleShow"></task-images>
+           
+        </div>
+    </div>
+    
+    <!-- my main.js -->
+
+    <script src="./main.js"></script>
+    <script src="./components/task-images.js"></script>
+    <script src="./components/task-search.js"></script>
+    <script>
+        const mountedApp = app.mount('#app')
+    </script>
+</body>
+
+</html>
