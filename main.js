@@ -20,8 +20,7 @@ const app = Vue.createApp({
             like: false,
             show: false}
                     ],
-            searchText : '',
-            search: false,
+            searchText : ''
         }
     },
     methods: {
@@ -41,9 +40,6 @@ const app = Vue.createApp({
                     this.filterText[i].show =  false
                 }
             }
-        },
-        addText(text){
-            this.searchText = text;
         }
     },
     computed: {
